@@ -1,7 +1,4 @@
 # Essential services for AppFlowy Cloud
-env_file:
-  - stack.env
-
 services:
   nginx:
     restart: on-failure
