@@ -200,5 +200,5 @@ services:
     depends_on:
       - appflowy_cloud
 volumes:
-  postgres_data:
-  minio_data:
+  postgres_data: /home/harsh-yadav/appflowy/postgres
+  minio_data: /home/harsh-yadav/appflowy/postgres/db
