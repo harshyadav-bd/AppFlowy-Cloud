@@ -5,12 +5,12 @@ services:
     restart: on-failure
     image: nginx
     ports:
-      - ${NGINX_PORT:-80}:80   # Disable this if you are using TLS
-      - ${NGINX_TLS_PORT:-443}:443
+      - 85:80   # Disable this if you are using TLS
+      - 445:443
     volumes:
-      - /home/harsh-yadav/plex-external/appflowy/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - /home/harsh-yadav/plex-external/appflowy/nginx/ssl/certificate.crt:/etc/nginx/ssl/certificate.crt
-      - /home/harsh-yadav/plex-external/appflowy/nginx/ssl/private_key.key:/etc/nginx/ssl/private_key.key
+      - /home/harsh-yadav/AppFlowy-Cloud/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - /home/harsh-yadav/AppFlowy-Cloud/nginx/ssl/certificate.crt:/etc/nginx/ssl/certificate.crt
+      - /home/harsh-yadav/AppFlowy-Cloud/nginx/ssl/private_key.key:/etc/nginx/ssl/private_key.key
 
   # You do not need this if you have configured to use your own s3 file storage
   minio:
